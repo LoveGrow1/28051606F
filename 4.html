@@ -53,7 +53,7 @@
   <div class="row">
     <div class="col-12">
       <div class="info-box">
-        <p>Your response to "I can always tell my partner what I want without worrying they will be mean or mad" is interesting. You answered "No", which is actually less common. Roughly 70% of females in a relationship feel they can express their desires without fear of a negative response from their partner.</p>
+        <p>When asked "I can always tell my partner what I want without worrying they will be mean or mad.", you replied 'I don’t know'. It's worth noting that according to relationship studies, about 38% of women feel uncertain about their ability to freely express their desires in their relationship. It shows that you're not alone and many people are working to improve this aspect of their relationships.</p>
         <!-- Wrap the canvas element inside the new div -->
         <div class="chart-container">
           <canvas id="myChart"></canvas>
@@ -69,21 +69,23 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['Yes', 'No'],
+        labels: ['Yes', 'No', 'I don\'t know'],
         datasets: [{
-            data: [70, 30],
+            data: [45, 17, 38],
             backgroundColor: [
                 'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 99, 132, 0.5)'
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(128, 255, 0, 0.5)'
             ],
             borderColor: [
                 'rgba(54, 162, 235, 1)',
-                'rgba(255, 99, 132, 1)'
+                'rgba(255, 99, 132, 1)',
+                'rgba(0, 153, 0, 1)',
             ],
             borderWidth: 1
         }]
     },
-    options: {
+      options: {
         responsive: true,
         maintainAspectRatio: true,
         legend: {
